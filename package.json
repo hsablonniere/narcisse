@@ -1,0 +1,19 @@
+{
+    "name": "narcisse",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node src/server.js"
+    },
+    "engines": {
+        "node": "^9"
+    },
+    "dependencies": {
+        "convict": "^4.0.2",
+        "fs-extra": "^5.0.0",
+        "google": "^2.1.0",
+        "lowdb": "^1.0.0",
+        "pushbullet": "^2.1.0",
+        "url": "^0.11.0",
+        "winston": "^2.4.0"
+    }
+}

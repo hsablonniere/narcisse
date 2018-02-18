@@ -1,0 +1,50 @@
+= narcisse
+
+*narcisse* is a simple bot.
+It's designed to search for queries on Google and then to push you the links it founds using Pushbullet.
+
+== How to run it?
+
+Set the environment variables and run the bot with:
+
+```
+node src/narcisse.js
+```
+
+The script is designed to run only once but you should run it periodically with cron (or something else).
+
+NOTE: If you want to deploy this bot on Clever Cloud, there's already a `clevercloud/cron.json` file where you can tune the periodicity.
+
+=== Environment variables
+
+==== `SEARCH_QUERIES`
+
+Here you can set a list of Google queries.
+You need to separate them with comas.
+You can (and maybe) should put you queries between double quotes to do strict search.
+
+Example: `"john smith",BrandFoobar`
+
+==== `UNWANTED_DOMAINS`
+
+Here you can specify a list of domains you want to ignore.
+You need to separate them with comas.
+This is very useful since some sites tend to produce a lot of false positives.
+
+Example: `twitter.com,www.youtube.com`
+
+==== `PUSH_BULLET_ACCESS_TOKEN`
+
+Here you should specify your Pushbullet access token.
+You can get it here: https://www.pushbullet.com/#settings.
+
+==== `DATABASE_PATH`
+
+The "database" is just a flat JSON file.
+With this option, you can specify the path to this JSON file.
+If does not exist yet, it will be created and initialized.
+The path can be absolute or relative to the root of this project.
+
+== How to contribute?
+
+Well, this project seems good as it is for me so not much details here but feel free to file an issue if you have any questions.
